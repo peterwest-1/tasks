@@ -4,8 +4,6 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 // ----------------------------------------------------------------------
 
-import Router from 'src/routes/sections';
-
 import ThemeProvider from 'src/theme';
 
 import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
@@ -15,6 +13,7 @@ import { MotionLazy } from 'src/components/animate/motion-lazy';
 import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
 
 import { AuthProvider } from 'src/auth/context/jwt';
+import OneView from './sections/one/view';
 
 // ----------------------------------------------------------------------
 
@@ -50,7 +49,7 @@ export default function App() {
             <MotionLazy>
               <SettingsDrawer />
               <ProgressBar />
-              <Router />
+              <OneView />
             </MotionLazy>
           </ThemeProvider>
         </SettingsProvider>
